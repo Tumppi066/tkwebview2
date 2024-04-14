@@ -19,7 +19,7 @@ user32=ctypes.windll.user32
 class WebView2(Frame):
     '''tkinter的WebView2绑定，基于pywebview & pythonnet'''
     
-    def __init__(self,parent,width:int,height:int,url:str='',**kw):
+    def __init__(self,parent,width:int,height:int,url:str='', cache=None,**kw):
         Frame.__init__(self,parent,width=width,height=height,**kw)
         control=Control()
         uid = 'master' if len(windows) == 0 else 'child_' + uuid4().hex[:8]
@@ -30,7 +30,7 @@ class WebView2(Frame):
                       transparent=False, text_select=True, localization=None,
                       zoomable=True, draggable=True, vibrancy=False)
         self.window=window
-        self.web_view=EdgeChrome(control,window,None)
+        self.web_view=EdgeChrome(control,window,cache)
         self.control=control
         self.web=self.web_view.web_view
         windows.append(window)

@@ -1,3 +1,5 @@
+Note: Only edit of this fork is to add control of the cache directory.
+
 # tkwebview2
 
 tkinter浏览器-网页组件，tkwebview2登场！！！

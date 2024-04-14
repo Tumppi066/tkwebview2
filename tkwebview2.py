@@ -15,6 +15,7 @@ from System.Threading import Thread,ApartmentState,ThreadStart,SynchronizationCo
 
 user32=ctypes.windll.user32
 
+version = "Tumppi066" # This line is so that ETS2LA can detect the version to automatically update.
 
 class WebView2(Frame):
     '''tkinter的WebView2绑定，基于pywebview & pythonnet'''
